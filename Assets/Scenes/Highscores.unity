@@ -376,7 +376,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 509679069}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+<<<<<<< HEAD
   m_LocalPosition: {x: -18.0667858, y: 0, z: 0}
+=======
+  m_LocalPosition: {x: -18.0667839, y: 0, z: 0}
+>>>>>>> 12f6d1dbdac1c1320a7006db02bdf718bfbdcdd3
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2025175467}
@@ -479,7 +483,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 875148805}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+<<<<<<< HEAD
   m_LocalPosition: {x: -24, y: 0, z: 0}
+=======
+  m_LocalPosition: {x: -25, y: 5, z: 0}
+>>>>>>> 12f6d1dbdac1c1320a7006db02bdf718bfbdcdd3
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2025175467}
@@ -512,13 +520,22 @@ MonoBehaviour:
     absolute: 0
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
+<<<<<<< HEAD
   mWidth: 748
   mHeight: 412
+=======
+  mWidth: 780
+  mHeight: 426
+>>>>>>> 12f6d1dbdac1c1320a7006db02bdf718bfbdcdd3
   mDepth: -3
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
+<<<<<<< HEAD
   aspectRatio: 1.815534
+=======
+  aspectRatio: 1.8309859
+>>>>>>> 12f6d1dbdac1c1320a7006db02bdf718bfbdcdd3
   mRect:
     serializedVersion: 2
     x: 0
@@ -1654,7 +1671,11 @@ Transform:
   m_GameObject: {fileID: 2025175466}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
   m_LocalScale: {x: .00485436898, y: .00485436898, z: .00485436898}
+=======
+  m_LocalScale: {x: .00459770113, y: .00459770113, z: .00459770113}
+>>>>>>> 12f6d1dbdac1c1320a7006db02bdf718bfbdcdd3
   m_Children:
   - {fileID: 509679073}
   - {fileID: 1562153233}
@@ -1718,7 +1739,11 @@ MonoBehaviour:
   startingRenderQueue: 3000
   mAlpha: 1
   mClipping: 0
+<<<<<<< HEAD
   mClipRange: {x: 0, y: 0, z: 300, w: 200}
+=======
+  mClipRange: {x: 0, y: 0, z: 640, w: 360}
+>>>>>>> 12f6d1dbdac1c1320a7006db02bdf718bfbdcdd3
   mClipSoftness: {x: 4, y: 4}
   mDepth: 0
 --- !u!114 &2025175470
@@ -1732,7 +1757,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c5ecb5660b11414fb042fb826e03b73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   scalingStyle: 0
   manualHeight: 720
+=======
+  scalingStyle: 2
+  manualHeight: 768
+>>>>>>> 12f6d1dbdac1c1320a7006db02bdf718bfbdcdd3
   minimumHeight: 320
   maximumHeight: 1536

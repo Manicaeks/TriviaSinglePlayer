@@ -5,13 +5,22 @@ PlayerSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   AndroidProfiler: 0
+<<<<<<< HEAD
   defaultScreenOrientation: 0
+=======
+  defaultScreenOrientation: 3
+>>>>>>> 12f6d1dbdac1c1320a7006db02bdf718bfbdcdd3
   targetDevice: 2
   targetGlesGraphics: 1
   targetResolution: 0
   accelerometerFrequency: 60
+<<<<<<< HEAD
   companyName: DefaultCompany
   productName: Unnecessary Censorship
+=======
+  companyName: Manicaeks
+  productName: NO.1 AMERICAN TRIVIA GAME
+>>>>>>> 12f6d1dbdac1c1320a7006db02bdf718bfbdcdd3
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   defaultScreenWidth: 1024
@@ -82,7 +91,11 @@ PlayerSettings:
   AndroidMinSdkVersion: 9
   AndroidPreferredInstallLocation: 1
   aotOptions: 
+<<<<<<< HEAD
   apiCompatibilityLevel: 2
+=======
+  apiCompatibilityLevel: 1
+>>>>>>> 12f6d1dbdac1c1320a7006db02bdf718bfbdcdd3
   iPhoneStrippingLevel: 0
   iPhoneScriptCallOptimization: 0
   ForceInternetPermission: 0
