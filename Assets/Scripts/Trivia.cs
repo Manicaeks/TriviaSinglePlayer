@@ -8,6 +8,10 @@ public class Trivia : MonoBehaviour {
 	public UISlider progressBar;
 	public UILabel lblScore;
 
+	public string highscorePos;
+	public float highScore;
+	public float temp;
+
 	public UILabel question;		//labels for the questions
 	public UILabel buttonA, buttonB, buttonC, buttonD;		
 	public UIButton btnA, btnB, btnC, btnD;
@@ -21,22 +25,28 @@ public class Trivia : MonoBehaviour {
 	private float countdown = 3f;		//round timers
 	private float roundtime = 45f;
 	private float progress;
+
 	private bool loaded = false;
 	private bool started = false;
 	private bool finished = false;
+	private bool scoreDone = false;
+	
 	public GameObject box;
-	public static int score = 0;
-	public float questions, correctAnswers;
+
+	public static int score, questions, correctAnswers = 0;
+
+	public float totalscore, totalasked, totalcorrect = 0f;
 	
 
 	public GameObject correct, wrong;
 
 	// Use this for initialization
 	void Start () {
-		ReadFile (Application.dataPath + "/Trivia/Questions.txt");
+		ReadFile (Application.dataPath + "/StreamingAssets/Questions.txt");
 
 		if(loaded)
 		SetRound();
+		score = 0;
 
 	}
 
@@ -80,7 +90,6 @@ public class Trivia : MonoBehaviour {
 	void SetRound(){
 		SetQuestion();
 		SetAnswer();
-		questions++;
 		started = true;
 	}
 	public void OnClick(){
@@ -91,7 +100,7 @@ public class Trivia : MonoBehaviour {
 		else{
 			Wrong();
 		}
-		lblScore.text = "Score: " + Trivia.score.ToString();
+		lblScore.text = "Score: " + score;
 		Reset ();
 		}
 	}
@@ -107,33 +116,38 @@ public class Trivia : MonoBehaviour {
 		Instantiate(correct, transform.position, Quaternion.identity);
 		correctAnswers++;
 		score += 2;
+		questions++;
 	}
 
 	void Wrong(){
 		Instantiate(wrong, transform.position, Quaternion.identity);
 		score--;
+		questions++;
 	}
 
 	void SaveData(){
-		float totalscore = PlayerPrefs.GetFloat("Score", 0);
-		float totalasked = PlayerPrefs.GetFloat("QuestionsAsked", 0);
-		float totalcorrect = PlayerPrefs.GetFloat("CorrectAnswers", 0);
 
-		totalscore += score;
-		totalasked += questions;
-		totalcorrect += correctAnswers;
+		for(int i=0; i<5; i++){
+			if((PlayerPrefs.GetFloat("highscorePos"+i) < score && (scoreDone == false))){
+				temp = PlayerPrefs.GetFloat("highscorePos"+i);
+				PlayerPrefs.SetFloat("highscorePos"+i, score);
+				scoreDone = true;
 
 
-		PlayerPrefs.SetFloat("tScore", score);
-		PlayerPrefs.SetFloat("tQuestionsAsked", questions);
-		PlayerPrefs.SetFloat("tCorrectAnswers", correctAnswers);
-		PlayerPrefs.SetFloat("Score", totalscore);
-		PlayerPrefs.SetFloat("QuestionsAsked", totalasked);
-		PlayerPrefs.SetFloat("CorrectAnswers", totalcorrect);
+				if(i<5){
+					int j=i+1;
+					PlayerPrefs.SetFloat("highscorePos"+j, temp);
+					scoreDone = true;
+				}
+			}
+		}
+
+		PlayerPrefs.Save();
 	}
 
 	public void Done(){
-		Application.LoadLevel(0);
+		PlayerPrefs.Save();
+		Application.LoadLevel(2);
 	}
 
 	void Reset(){

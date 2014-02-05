@@ -7,4 +7,12 @@ public class MainPage : MonoBehaviour {
 		Application.LoadLevel(1);
 	}
 
+	public void LoadScores(){
+		Application.LoadLevel(3);
+	}
+
+	public void LoadSettings(){
+		Application.LoadLevel(4);
+	}
+
 }
